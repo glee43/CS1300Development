@@ -149,7 +149,8 @@ class FilteredList extends Component {
                 <h1>Smash Melee Filter!</h1>
                 <input
                     type="text"
-                    placeholder="Search"
+                    className="search-bar"
+                    placeholder="Search by character name!"
                     onChange={this.onSearch}
                 />
                 <div className="filterBar">
