@@ -16,14 +16,15 @@ import iceClimbersImg from "./images/iceClimbers.jpg";
 import zeldaImg from "./images/zelda.jpg";
 import jigglyPuffImg from "./images/jigglyPuff.jpg";
 import FilteredList from "./components/FilteredList/FilteredList";
-const characters = [
+let characters = [
     {
         name: "Mario",
         weight: "Medium",
         franchise: "Mario",
         charNum: 1,
         type: "Hero",
-        image: marioImg
+        image: marioImg,
+        favorite: false
     },
     {
         name: "Donkey Kong",
@@ -31,7 +32,8 @@ const characters = [
         franchise: "Mario",
         charNum: 2,
         type: "Villian",
-        image: donkeyKongImg
+        image: donkeyKongImg,
+        favorite: false
     },
     {
         name: "Link",
@@ -39,7 +41,8 @@ const characters = [
         franchise: "Zelda",
         charNum: 3,
         type: "Hero",
-        image: linkImg
+        image: linkImg,
+        favorite: false
     },
     {
         name: "Samus",
@@ -47,7 +50,8 @@ const characters = [
         franchise: "Metroid",
         charNum: 4,
         type: "Hero",
-        image: samusImg
+        image: samusImg,
+        favorite: false
     },
     {
         name: "Yoshi",
@@ -55,7 +59,8 @@ const characters = [
         franchise: "Mario",
         charNum: 5,
         type: "Hero",
-        image: yoshiImg
+        image: yoshiImg,
+        favorite: false
     },
     {
         name: "Kirby",
@@ -63,7 +68,8 @@ const characters = [
         franchise: "Kirby",
         charNum: 6,
         type: "Hero",
-        image: kirbyImg
+        image: kirbyImg,
+        favorite: false
     },
     {
         name: "Fox",
@@ -71,7 +77,8 @@ const characters = [
         franchise: "Star Fox",
         charNum: 7,
         type: "Hero",
-        image: foxImg
+        image: foxImg,
+        favorite: false
     },
     {
         name: "Pikachu",
@@ -79,7 +86,8 @@ const characters = [
         franchise: "Pokemon",
         charNum: 8,
         type: "Hero",
-        image: pikachuImg
+        image: pikachuImg,
+        favorite: false
     },
     {
         name: "Ness",
@@ -87,7 +95,8 @@ const characters = [
         franchise: "EarthBound",
         charNum: 9,
         type: "Hero",
-        image: nessImg
+        image: nessImg,
+        favorite: false
     },
     {
         name: "Captain Falcon",
@@ -95,7 +104,8 @@ const characters = [
         franchise: "F-Zero",
         charNum: 10,
         type: "Hero",
-        image: captainFalconImg
+        image: captainFalconImg,
+        favorite: false
     },
     {
         name: "Jiggly Puff",
@@ -103,7 +113,8 @@ const characters = [
         franchise: "Pokemon",
         charNum: 11,
         type: "Hero",
-        image: jigglyPuffImg
+        image: jigglyPuffImg,
+        favorite: false
     },
     {
         name: "Peach",
@@ -111,7 +122,8 @@ const characters = [
         franchise: "Mario",
         charNum: 12,
         type: "Hero",
-        image: peachImg
+        image: peachImg,
+        favorite: false
     },
     {
         name: "Bowser",
@@ -119,7 +131,8 @@ const characters = [
         franchise: "Mario",
         charNum: 13,
         type: "Villian",
-        image: bowserImg
+        image: bowserImg,
+        favorite: false
     },
     {
         name: "Ice Climbers",
@@ -127,7 +140,8 @@ const characters = [
         franchise: "Ice Climbers",
         charNum: 14,
         type: "Hero",
-        image: iceClimbersImg
+        image: iceClimbersImg,
+        favorite: false
     },
     {
         name: "Zelda",
@@ -135,7 +149,8 @@ const characters = [
         franchise: "Zelda",
         charNum: 15,
         type: "Hero",
-        image: zeldaImg
+        image: zeldaImg,
+        favorite: false
     }
 ];
 class App extends Component {
