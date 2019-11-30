@@ -1,0 +1,19 @@
+.characterContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+    font-family: "Droid Serif";
+    font-size: x-large;
+}
+
+.charNum {
+    font-weight: bold;
+}
+.characterImage {
+    height: 200px;
+    width: 200px;
+    object-fit: contain;
+    overflow: hidden;
+}
