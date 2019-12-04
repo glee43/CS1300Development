@@ -1,12 +1,21 @@
 import React, { Component } from "react";
 import "./Character.css";
+import { Star } from "@material-ui/icons";
 class Character extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            favorite: false
+            favorite: props.favorite
         };
     }
+
+    changeFavorite = () => {
+        let { data } = this.props;
+        data.favorite = !data.favorite;
+        this.setState({
+            favorite: data.favorite
+        });
+    };
 
     render() {
         let { data } = this.props;
@@ -17,6 +26,20 @@ class Character extends Component {
                 <div className="charNum">Weight: {data.weight}</div>
                 <div className="charNum">Franchise: {data.franchise}</div>
                 <div className="charNum">Type: {data.type}</div>
+                <button
+                    style={{
+                        backgroundColor: "transparent",
+                        color: data.favorite ? "yellow" : "white"
+                    }}
+                    onClick={this.changeFavorite}
+                >
+                    <Star
+                        style={{
+                            color: data.favorite ? "yellow" : "white"
+                        }}
+                    />
+                    Favorite!
+                </button>
             </div>
         );
     }

@@ -1,12 +1,21 @@
 .filterBar {
     margin-top: 20px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: stretch;
+    font-weight: bold;
+    width: 70vw;
+    align-self: center;
 }
 .search-bar {
     width: 70vw;
     height: auto;
     border-radius: 10px;
     border: lightskyblue solid;
+}
+.FilteredListContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }

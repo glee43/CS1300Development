@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { DropdownButton, Dropdown, Button } from "react-bootstrap";
 import List from "../List/List";
 import "./FilteredList.css";
+import Modal from "react-modal";
+
 class FilteredList extends Component {
     constructor(props) {
         super(props);
@@ -13,23 +15,29 @@ class FilteredList extends Component {
             weight: "",
             franchise: "",
             type: "",
-            sortFuction: this.normalSort
+            sortFuction: this.normalSort,
+            showFavorite: false
         };
     }
 
     // sets the weight filter state
     weightFilter = event => {
-        this.setState({ weight: event, franchise: "", type: "" });
+        this.setState({ weight: event === "All" ? "" : event });
     };
 
     // sets the franchise filter state
     franchiseFilter = event => {
-        this.setState({ weight: "", franchise: event, type: "" });
+        this.setState({ franchise: event === "All" ? "" : event });
     };
 
     // sets the type filter state
     typeFilter = event => {
-        this.setState({ weight: "", franchise: "", type: event });
+        this.setState({ type: event === "Both" ? "" : event });
+    };
+
+    // sets the favorite filter state
+    showFavorite = event => {
+        this.setState({ showFavorite: !this.state.showFavorite });
     };
 
     // choosing the sort function
@@ -74,7 +82,8 @@ class FilteredList extends Component {
             weight: "",
             franchise: "",
             type: "",
-            sortFuction: this.normalSort
+            sortFuction: this.normalSort,
+            showFavorite: false
         });
     };
 
@@ -87,17 +96,20 @@ class FilteredList extends Component {
     matchesFilterType = item => {
         // TODO: add conditions to check if item type is equal to selected type
         let check = true;
+        if (this.state.showFavorite) {
+            check = item.favorite;
+        }
         if (this.state.weight !== "" && item.weight !== this.state.weight) {
-            return false;
+            check = false;
         }
         if (
             this.state.franchise !== "" &&
             item.franchise !== this.state.franchise
         ) {
-            return false;
+            check = false;
         }
         if (this.state.type !== "" && item.type !== this.state.type) {
-            return false;
+            check = false;
         }
         return check;
     };
@@ -125,7 +137,7 @@ class FilteredList extends Component {
     };
 
     render() {
-        let weight = ["Heavy", "Medium", "Light"];
+        let weight = ["Heavy", "Medium", "Light", "All"];
         let franchise = [
             "Mario",
             "Zelda",
@@ -135,9 +147,10 @@ class FilteredList extends Component {
             "Pokemon",
             "EarthBound",
             "F-Zero",
-            "Ice Climbers"
+            "Ice Climbers",
+            "All"
         ];
-        let type = ["Hero", "Villian"];
+        let type = ["Hero", "Villian", "Both"];
         let sort = [
             "Name Alphabetical (A-Z)",
             "Name Alphabetical (Z-A)",
@@ -207,7 +220,26 @@ class FilteredList extends Component {
                     </DropdownButton>
                     <Button
                         id="dropdown-basic-button"
+                        onClick={this.showFavorite}
+                        style={{
+                            backgroundColor: "yellow",
+                            color: "black",
+                            border: "none",
+                            fontWeight: "bold"
+                        }}
+                    >
+                        {!this.state.showFavorite
+                            ? "Show Favorites!"
+                            : "Uncheck Favorites"}
+                    </Button>
+                    <Button
+                        id="dropdown-basic-button"
                         onClick={this.revertList}
+                        style={{
+                            backgroundColor: "red",
+                            border: "none",
+                            fontWeight: "bold"
+                        }}
                     >
                         Revert
                     </Button>
