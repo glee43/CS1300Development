@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/CS1300Development/static/css/main.1a3d0d8a.chunk.css",
+    "main.js": "/CS1300Development/static/js/main.5a0bd8b1.chunk.js",
+    "main.js.map": "/CS1300Development/static/js/main.5a0bd8b1.chunk.js.map",
+    "runtime-main.js": "/CS1300Development/static/js/runtime-main.68a1050e.js",
+    "runtime-main.js.map": "/CS1300Development/static/js/runtime-main.68a1050e.js.map",
+    "static/js/2.f7bd3b2f.chunk.js": "/CS1300Development/static/js/2.f7bd3b2f.chunk.js",
+    "static/js/2.f7bd3b2f.chunk.js.map": "/CS1300Development/static/js/2.f7bd3b2f.chunk.js.map",
+    "index.html": "/CS1300Development/index.html",
+    "precache-manifest.f3d615d712941a469d62492ef61e229b.js": "/CS1300Development/precache-manifest.f3d615d712941a469d62492ef61e229b.js",
+    "service-worker.js": "/CS1300Development/service-worker.js",
+    "static/css/main.1a3d0d8a.chunk.css.map": "/CS1300Development/static/css/main.1a3d0d8a.chunk.css.map",
+    "static/js/2.f7bd3b2f.chunk.js.LICENSE": "/CS1300Development/static/js/2.f7bd3b2f.chunk.js.LICENSE",
+    "static/media/donkeyKong.jpg": "/CS1300Development/static/media/donkeyKong.90acc7d8.jpg",
+    "static/media/fox.jpg": "/CS1300Development/static/media/fox.1ccba2ff.jpg",
+    "static/media/link.jpg": "/CS1300Development/static/media/link.a0fe9ba8.jpg",
+    "static/media/mario.jpg": "/CS1300Development/static/media/mario.63263e51.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.68a1050e.js",
+    "static/js/2.f7bd3b2f.chunk.js",
+    "static/css/main.1a3d0d8a.chunk.css",
+    "static/js/main.5a0bd8b1.chunk.js"
+  ]
+}
