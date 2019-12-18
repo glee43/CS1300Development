@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { DropdownButton, Dropdown, Button } from "react-bootstrap";
 import List from "../List/List";
 import "./FilteredList.css";
-import Modal from "react-modal";
 
 class FilteredList extends Component {
     constructor(props) {

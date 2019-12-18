@@ -6,9 +6,10 @@
     background-color: black;
     color: white;
     height: calc(100vh - 20px);
-    margin: 15px;
+    margin: 10px;
     font-family: "Droid Serif";
     font-size: x-large;
+    overflow: hidden;
 }
 
 .App-logo {
