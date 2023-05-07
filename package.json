@@ -12,7 +12,7 @@
         "bootstrap": "^4.4.1",
         "fiber": "^1.0.4",
         "fibers": "^4.0.2",
-        "jquery": "^3.4.1",
+        "jquery": "^3.5.0",
         "node-sass": "^4.13.0",
         "popper": "^1.0.1",
         "popper.js": "^1.16.0",
